@@ -1,0 +1,44 @@
+<input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+<div class="card">
+    <div *ngIf="card.image!=''" class="bitmap">
+      <img [src]="card.image">
+    </div>
+    <div *ngIf="card.image==''" class="bitmap">
+        <div class="mask"><div class="loadPhoto">загрузить фото</div></div>
+    </div>
+
+    <div class="header">
+      <div class="title">
+        <input placeholder="Имя" type="string"  #name>
+      </div>
+      <div class="subtitle">
+          <input placeholder="Должность" type="string"  #subtitle>
+      </div>
+    </div>
+
+    <div class="save" (click)="saveNew()">
+        <img src="../../../assets/baseline-done-24px.svg">
+    </div>
+  
+  <div class="phone">
+    <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+    <div class="phoneNum">
+        <input placeholder="Телефон" type="string"  #phone>
+    </div>
+    
+      <div class="line"></div>
+      <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+      <div class="addPhone">
+          <input placeholder="Добавочный" type="string"  #addPhone>
+      </div>
+    
+  </div>
+  
+  <div class="footer">
+    <div class="text1">Коммерческий отдел</div>
+    <div class="dot"></div>
+    <div class="text2">Radius</div>
+    <div class="dot"></div>
+    <div class="text3">Финансы</div>
+  </div>
+  </div>

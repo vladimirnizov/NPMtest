@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="bitmap">
+    <img [src]="card.image">
+  </div>
+  <div class="header">
+    <div class="title">
+      <span *ngIf="!edit">{{card.name}}</span>
+      <input *ngIf="edit" type="string" value="{{card.name}}" #name>
+    </div>
+    <div class="subtitle">
+        <span *ngIf="!edit">{{card.subtitle}}</span>
+        <input *ngIf="edit" type="string" value="{{card.subtitle}}" #subtitle>
+    </div>
+  </div>
+
+    <div class="editImage" (click)="onEdit()">
+      <img src="../../../assets/XMLID_37_.png">
+    </div>
+    <div *ngIf="edit" class="save" (click)="save()">
+        <img src="../../../assets/baseline-done-24px.svg">
+    </div>
+
+<div class="phone">
+  <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+  <div class="phoneNum">
+      <span *ngIf="!edit">{{card.phone}}</span>
+      <input *ngIf="edit" type="string" value="{{card.phone}}" #phone>
+  </div>
+  <div *ngIf="card.addPhone!=''&&!edit">
+    <div class="line"></div>
+    <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+    <div class="addPhone">
+        <span >{{card.addPhone}}</span>
+    </div>
+  </div>
+  <div *ngIf="edit">
+      <div class="line"></div>
+      <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+      <div class="addPhone">
+          <input type="string" value="{{card.addPhone}}" #addPhone>
+      </div>
+    </div>    
+</div>
+
+<div class="footer">
+  <div class="text1">Коммерческий отдел</div>
+  <div class="dot"></div>
+  <div class="text2">Radius</div>
+  <div class="dot"></div>
+  <div class="text3">Финансы</div>
+</div>
+</div>
+

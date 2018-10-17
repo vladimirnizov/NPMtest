@@ -1,0 +1,40 @@
+.displayCards {
+    display: flex;
+    position: absolute;
+    display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin-right: 430px;
+
+}
+
+.sidebar{
+    height: 100%; 
+    width: 430px; 
+    position: fixed;
+    z-index: 1; 
+    top: 0; 
+    right: 0;
+    overflow-x: hidden; 
+    padding-top: 20px;
+}
+
+.new{
+    cursor: pointer;
+    height: 202px;	
+    width: 422px;	
+    border: 1px solid #979797;	
+    border-radius: 4px;	
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.2);
+}
+
+.group {	
+    height: 70px;	
+    width: 71px;
+    padding-top: 66px;
+    padding-left: 176px
+}
+
+.group>img{
+    height: 70px;	
+}

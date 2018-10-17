@@ -1,0 +1,27 @@
+<div class="card" (click)="getCardByClick()">
+  <div class="bitmap">
+    <img [src]="card.image">
+  </div>
+  <div class="header">
+    <div class="title">{{card.name}}</div>
+    <div class="subtitle">{{card.subtitle}}</div>
+  </div>
+
+<div class="phone">
+  <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+  <div class="phoneNum">{{card.phone}}</div>
+  <div *ngIf="card.addPhone!=''">
+    <div class="line"></div>
+    <div><img class="phoneIcon" src="/assets/Shape.png"/></div>
+    <div class="addPhone">{{card.addPhone}}</div>
+  </div>  
+</div>
+
+<div class="footer">
+  <div class="text1">Коммерческий отдел</div>
+  <div class="dot"></div>
+  <div class="text2">Radius</div>
+  <div class="dot"></div>
+  <div class="text3">Финансы</div>
+</div>
+</div>

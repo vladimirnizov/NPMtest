@@ -1,0 +1,22 @@
+<div class="sidebar">
+  <app-card-details *ngIf="currentCard!=null" 
+                    [card]="currentCard"
+                    (edited)="edited($event)"
+                    ></app-card-details>
+
+  <app-new-card *ngIf="newCard"
+                (new)="new($event)"></app-new-card>
+  <div *ngIf="plus" class="new" (click)="addNew()">
+    <div class="group">
+      <img src="/assets/Group.png">
+    </div>
+  </div>
+</div>
+
+<div class="displayCards">
+<app-card *ngFor="let c of cards; let ind = index" 
+          [card]="c" 
+          [ind]="ind" 
+          (getCard)="getCard($event)"
+          ></app-card>
+</div>
